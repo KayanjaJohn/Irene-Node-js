@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="css/Patients.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nabla&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Patients' Register</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 md-6 lg-6">
+                <form action="/Patients'-documents.html" name="registration" onsubmit="checkForm()" >
+                    <div class="form-head">
+                        <h2>Please login</h2>
+                    </div>
+                    
+                    <div class="form-inputs">
+                        <label for="username">Username:</label>
+                        <input type="text" name="userName" id="username"  placeholder="Enter your Username ">
+                    </div>
+                    <div class="form-inputs">
+                        <label for="mailto">Email:</label>
+                        <input type="email" name="email" id="mailto"  placeholder="Enter your @email">
+                    </div>
+                    <div class="form-inputs">
+                        <label for="security">Password:</label>
+                        <input type="password" name="password" id="security" pattern="[0-9a-zA-z]{6,20}"  placeholder="Enter your password">
+                    </div>
+                    <div class="form-inputs">
+                        <label for="age">Age:</label>
+                        <input type="number" name="Age" id="age" min="13" max="120"  placeholder="Enter your age(only for 13 & above) ">
+                    </div>
+                    <div class="form-inputs">
+                        <label for="date">Date:</label>
+                        <input type="date" name="Date" id="date"  placeholder="Enter the date of registration">
+                    </div>
+
+                    <div class="submit">
+                        <div class="btn">
+                            <button type="submit" name="Submit" id="next" value="Login"><span></span>Login</button>
+                        </div>
+                        <a href="/Patients-register.html">Create account</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="form.js"></script>
+</html>
