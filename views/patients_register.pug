@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title registration
+  link(rel='stylesheet' href='css/patients.css')
+  link(href='https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nabla&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap' rel='stylesheet')
+h1 Patients&apos; Register
+.container
+  .row
+    .col-sm-12.md-6.lg-6
+      form(action='/register' name='registration' method='post' onsubmit='checkForm()')
+        .form-head
+          h2 Please login
+        .form-inputs
+          label(for='userName') Name:
+          input#userName(type='text' name='username' placeholder='Enter your Username ')
+        .form-inputs
+          label(for='mailto') Email:
+          input#mailto(type='email' name='email' placeholder='Enter your @email')
+        .form-inputs
+          label(for='security') Create password:
+          input#security(type='password' name='password' pattern='[0-9a-zA-z]{6,20}' placeholder='Enter your password')
+        .form-inputs
+          label(for='security') Comfirm password:
+          input#security(type='password' name='password' pattern='[0-9a-zA-z]{6,20}' placeholder='Enter your password')
+        .form-inputs
+          label(for='Age') Age:
+          input#Age(type='number' name='age' min='13' max='120' placeholder='Enter your age(only for 13 & above) ')
+        .form-inputs
+          label(for='Date') Date:
+          input#Date(type='date' name='date' placeholder='Enter the date of registration')
+        .form-radio
+          label Gender:
+          .sex
+            label
+              | Male    
+              input.inline(type='radio' name='sex' value='Male' checked='')
+            label
+              | Female  
+              input.inline(type='radio' name='sex' value='Female')
+        .submit
+          .btn
+            button#next(type='submit' name='submit' value='Login')
+              span
+              | Login
+script(src='form.js')
